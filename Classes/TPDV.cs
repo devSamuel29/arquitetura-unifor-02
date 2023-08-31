@@ -8,13 +8,6 @@ public class TPDV
 
     public void FacaPagamento(PagamentoRequest request)
     {
-        var response = _venda.FacaPagamento(request);
-        
-        Console.WriteLine("VENDA -> PAGAMENTO:");
-        Console.WriteLine($"Id: {response.Id}");
-        Console.WriteLine($"Agente: {response.Agente}");
-        Console.WriteLine($"Valor: {response.Valor}");
-                
-        Console.WriteLine($"Data: {response.DataPagemento}");
+        _venda.Mostrar(request);
     }
 }
